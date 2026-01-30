@@ -1,0 +1,121 @@
+:root {
+  color-scheme: light;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f5f7fb;
+  color: #1f2a44;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: min(92vw, 640px);
+}
+
+.app-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(20, 30, 60, 0.12);
+  padding: 24px;
+  display: grid;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: #f0f4ff;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #2f6bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: #1f57f0;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  background: #d8e2ff;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.tile {
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  background: #5c8aff;
+  color: white;
+  font-size: clamp(20px, 4vw, 28px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.tile:hover {
+  transform: translateY(-2px);
+  background: #4a78ff;
+}
+
+.tile.empty {
+  background: transparent;
+  cursor: default;
+  box-shadow: inset 0 0 0 2px rgba(120, 140, 180, 0.3);
+}
+
+.tile.empty:hover {
+  transform: none;
+}
+
+.message {
+  font-size: 14px;
+  color: #3b4a6b;
+}
